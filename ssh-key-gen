@@ -32,3 +32,12 @@ $ sudo apt-get install sshpass
 $ sshpass -p your_password ssh user@hostname
 
 yes y | ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa > /dev/null
+
+
+-------------------------------------------------------------------------------
+
+# generate ssy key pair silently
+yes y | ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa > /dev/null
+
+# register public key in multiple hosts
+for ip in "192.168.0.1" "192.168.0.2"; do sshpass -p 'toor' ssh-copy-id  -oStrictHostKeyChecking=no "root@$ip" > /dev/null; done
