@@ -1,3 +1,12 @@
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+------------------------------------------------------------------------------------------------
+
 sudo ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<<y >/dev/null 2>&1
 
 sudo ssh-copy-id -i ~/.ssh/id_rsa.pub myadmin@172.20.1.10
