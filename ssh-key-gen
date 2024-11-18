@@ -30,3 +30,5 @@ sudo sh token.sh
 
 $ sudo apt-get install sshpass
 $ sshpass -p your_password ssh user@hostname
+
+yes y | ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa > /dev/null
