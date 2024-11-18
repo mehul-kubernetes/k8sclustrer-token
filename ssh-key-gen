@@ -41,3 +41,7 @@ yes y | ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa > /dev/null
 
 # register public key in multiple hosts
 for ip in "192.168.0.1" "192.168.0.2"; do sshpass -p 'toor' ssh-copy-id  -oStrictHostKeyChecking=no "root@$ip" > /dev/null; done
+
+------------------------------------------------------------------------------------------------------------
+yes y | ssh-keygen -t rsa -N "" -f /home/myadmin/.ssh/node01 > /dev/null
+for ip in "172.20.1.12"; do sshpass -p Admin@123456 ssh-copy-id  -oStrictHostKeyChecking=no "myadmin@172.20.1.11" > /dev/null; done
